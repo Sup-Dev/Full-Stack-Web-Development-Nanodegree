@@ -8,17 +8,21 @@ def draw_square(some_turtle):
 def draw_art():
 	window = turtle.Screen()
 	window.bgcolor("red")
+
 	# Create the turtle Brad - Draw a square
 	brad = turtle.Turtle()
 	brad.shape("turtle")
 	brad.color("yellow")
 	brad.speed(2)
-	draw_square(brad)
+	for i in range(36):
+		draw_square(brad)
+		brad.right(10)
+
 	# Create the turtle Angie - Draw a circle
-	angie = turtle.Turtle()
-	angie.shape("arrow")
-	angie.color("blue")
-	angie.circle(100)
+	#angie = turtle.Turtle()
+	#angie.shape("arrow")
+	#angie.color("blue")
+	#angie.circle(100)
 
 	window.exitonclick()
 
