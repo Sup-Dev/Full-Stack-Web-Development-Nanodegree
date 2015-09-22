@@ -149,7 +149,7 @@ def create_movie_tiles_content(movies):
             movie_director=movie.director,
             movie_duration=movie.duration,
             movie_release=movie.release,
-            movie_rating=movie.rating,
+            movie_rating=movie.show_rating(),
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id
         )
