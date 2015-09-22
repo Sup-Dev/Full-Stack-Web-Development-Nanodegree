@@ -125,8 +125,8 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
-    <h4>by {movie_director}<h4>
-    <h6>{movie_rating} | {movie_duration} | {movie_release}</h6>
+    <h4 style="color: #E55451">by {movie_director}<h4>
+    <h6 style="color: green">{movie_rating} | {movie_duration} | {movie_release}</h6>
 </div>
 '''
 
