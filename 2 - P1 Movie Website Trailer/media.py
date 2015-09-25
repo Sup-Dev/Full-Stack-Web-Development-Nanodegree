@@ -1,5 +1,6 @@
 import webbrowser
 
+
 class Movie():
 	"""This class provides a way to store movie related information"""
 
@@ -7,7 +8,9 @@ class Movie():
 	VALID_RATINGS = ["G", "PG", "PG-13", "R"]
 
 	# this is the constructer, it accepts details of a movie as arguments
-	def __init__(self, movie_title, movie_storyline, movie_duration, movie_release_date, movie_director, movie_rating, poster_image, trailer_youtube):
+	def __init__(self, movie_title, movie_storyline, movie_duration, 
+                 movie_release_date, movie_director, movie_rating, poster_image, 
+	             trailer_youtube):
 		self.title = movie_title
 		self.storyline = movie_storyline
 		self.duration = movie_duration
@@ -27,3 +30,4 @@ class Movie():
 			return self.rating
 		else:
 			return "NA"
+            
