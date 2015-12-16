@@ -24,6 +24,7 @@ from google.appengine.api import memcache
 from google.appengine.api import taskqueue
 from google.appengine.ext import ndb
 from google.appengine.api import memcache
+from google.appengine.api import taskqueue
 
 from models import StringMessage
 
@@ -156,7 +157,11 @@ class ConferenceApi(remote.Service):
         # create Conference, send email to organizer confirming
         # creation of Conference & return (modified) ConferenceForm
         Conference(**data).put()
-        # TODO 2: add confirmation email sending task to queue
+        # TODO 2: add confirmation email sending task to queue        
+        taskqueue.add(params={'email': user.email(),
+            'conferenceInfo': repr(request)},
+            url='/tasks/send_confirmation_email'
+        )
 
         return request
 
